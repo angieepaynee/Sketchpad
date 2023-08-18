@@ -5,6 +5,8 @@ body {
   justify-content: center;
   background-color: #69FFB4;
   font-family: 'Dekko';
+  position: relative;
+  min-height: 100vh;
 
 }
 
@@ -24,6 +26,8 @@ body {
 
   #gridContainer {
     margin: 30px;
+    flex: 1;
+    padding-bottom: 2.5rem;
   }
 
   .gridSizePrompt {
@@ -50,7 +54,9 @@ body {
     align-items: center;
     font-size: 18px;
     padding: 15px;
-    position: fixed;
+    position: absolute;
     bottom: 0; 
+    height: 2.5rem;
     width: 100%;
+
   }

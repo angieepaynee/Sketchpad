@@ -62,7 +62,7 @@ function askUser() {
                 return;
             }
 
-            if (!isNaN(userInput) && userInput > 0 && userInput <= 100) {
+            if (!isNaN(userInput) && userInput > 0 && userInput < 100) {
                 break; // Exit the loop if a valid number is entered
             }
 
