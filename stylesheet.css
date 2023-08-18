@@ -7,7 +7,6 @@ body {
   font-family: 'Dekko';
   position: relative;
   min-height: 100vh;
-
 }
 
 .gridRow {
@@ -58,5 +57,4 @@ body {
     bottom: 0; 
     height: 2.5rem;
     width: 100%;
-
   }

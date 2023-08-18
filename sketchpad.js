@@ -8,11 +8,11 @@ let isDrawing = false;
 
 function grid(rows, cols) {
     for (let i = 0; i < rows; i++) {
-        const gRows = document.createElement('div'); // Create a new row element
-        gRows.className = 'gridRow'; // You can apply a CSS class if needed
+        const gRows = document.createElement('div'); 
+        gRows.className = 'gridRow';
         gContainer.appendChild(gRows);
         for (let j = 0; j < cols; j++) {
-            const gCols = document.createElement('div'); // Create a new column element
+            const gCols = document.createElement('div'); 
             gCols.className = 'gridColumn'; // You can apply a CSS class if needed
             gRows.appendChild(gCols);
         }
@@ -29,12 +29,12 @@ function applyHoverEffect() {
     gridCells.forEach(cell => {
         cell.addEventListener("mousedown", () => {
             isDrawing = true;
-            cell.style.backgroundColor = "blue";
+            cell.style.backgroundColor = randColor();
         });
 
         cell.addEventListener("mousemove", () => {
             if (isDrawing) {
-            cell.style.backgroundColor = "blue";
+            cell.style.backgroundColor = randColor();
           }
         });
 
@@ -43,6 +43,11 @@ function applyHoverEffect() {
         });
     });
 };
+
+const randColor = () =>  {
+    return "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
+}
+
 
 
 const popup = document.createElement('button');
