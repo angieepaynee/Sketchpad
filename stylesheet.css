@@ -4,6 +4,8 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #69FFB4;
+  font-family: 'Dekko';
+
 }
 
 .gridRow {
@@ -12,28 +14,43 @@ body {
     min-height: 30px;
     min-width: 30px;
   }
-  
+
   .gridColumn {
     border: 2px solid black; 
     min-height: 30px;
     min-width: 30px;
     background-color: white;
+  }
 
+  #gridContainer {
+    margin: 30px;
   }
 
   .gridSizePrompt {
-    min-height: 50px;
-    min-width: 150px;
     background-color: #ff69b4;
     font-weight: bold;
-    font-size: 24px;
-    margin: 50px;
-    font-family: 'Dekko';
+    font-size: 30px;
+    margin: 20px;
     text-transform: uppercase;
     border-radius: 30px;
     border: 3px solid black;
     display: flex;
+    padding: 10px;
     align-items: center;
     justify-content: center;
     align-content: center;
+    flex-shrink: 0;
+    flex: 1;
+  }
+
+  footer {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding: 15px;
+    position: fixed;
+    bottom: 0; 
+    width: 100%;
   }

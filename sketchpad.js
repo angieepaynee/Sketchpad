@@ -1,11 +1,12 @@
 const gContainer = document.getElementById('gridContainer');
 const gSize = document.getElementById('gridSize');
 
+
 const rows = 16;
 const cols = 16;
 let isDrawing = false;
 
-function grid() {
+function grid(rows, cols) {
     for (let i = 0; i < rows; i++) {
         const gRows = document.createElement('div'); // Create a new row element
         gRows.className = 'gridRow'; // You can apply a CSS class if needed
@@ -16,9 +17,10 @@ function grid() {
             gRows.appendChild(gCols);
         }
     }
+    applyHoverEffect();
+
 };
 
-grid();
 
 
 function applyHoverEffect() {
@@ -41,7 +43,6 @@ function applyHoverEffect() {
         });
     });
 };
-applyHoverEffect();
 
 
 const popup = document.createElement('button');
@@ -65,17 +66,17 @@ function askUser() {
                 break; // Exit the loop if a valid number is entered
             }
 
-            alert("Please enter a valid positive number less than or equal to 100.");
+            alert("Please enter a valid positive number less than 100.");
         }
 
         // Valid input: update the grid size
         while (gContainer.firstChild) {
             gContainer.removeChild(gContainer.firstChild);
         }
-        grid(parseInt(userInput));
-        gContainer.appendChild(gSize);
+        grid(parseInt(userInput), parseInt(userInput)); // Pass userInput as both rows and cols
     });
 }
+grid(16,16);
 
 askUser();
 
