@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #69FFB4;
+}
+
+.gridRow {
+    display: flex; 
+    border: 2px solid #ff69b4;
+    min-height: 30px;
+    min-width: 30px;
+  }
+  
+  .gridColumn {
+    border: 2px solid black; 
+    min-height: 30px;
+    min-width: 30px;
+    background-color: white;
+
+  }
+
+  .gridSizePrompt {
+    min-height: 50px;
+    min-width: 150px;
+    background-color: #ff69b4;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 50px;
+    font-family: 'Dekko';
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
